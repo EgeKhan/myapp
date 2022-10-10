@@ -1,5 +1,6 @@
 import {Button,Modal} from 'react-bootstrap';
 import useDeneme from './useDeneme';
+import {useEffect} from "react";
 
 interface ModalComponentProps{
     child?: any;
@@ -7,6 +8,11 @@ interface ModalComponentProps{
 
 const ModalComponent: React.FC<ModalComponentProps> = ({child}) => {
 const modalController = useDeneme();
+
+useEffect(() => {
+  console.log('değişti')
+},[modalController.show])
+
 
 
     return ( 
